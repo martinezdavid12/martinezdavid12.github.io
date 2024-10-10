@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Project 3</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="11a2c98a-30dc-80ff-bbb4-dca0795dd18a" class="page sans"><header><h1 class="page-title">Project 3</h1><p class="page-description"></p></header><div class="page-body"><p id="11a2c98a-30dc-8045-8dd5-f73e05e1657f" class="">In this third project we create an algorithm which will seamlessly transition from one image to another, or even more! This will involve implementing a correspondence program in order to divide our source images into triangular regions.</p><p id="11a2c98a-30dc-8009-bde0-f7db18719c2c" class="">
+</p><h2 id="11a2c98a-30dc-80b2-a092-ce181947e0b1" class="">Part 1. Defining Correspondences</h2><p id="11a2c98a-30dc-801f-a5ab-c7d307df838c" class="">In order to create a linear map or affine transformation from one image to another, we need to find reference points. It will take a really long time to do this for each pixel or super small polygons, so we opt for triangles created by Delaunay Triangularization! Below is a program which I made to define correspondences, the reference points or “anchor” points of each image which we will map with bijective polygons! First, we choose points</p><figure id="11a2c98a-30dc-8094-b02e-cc08975826e2" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image.png"><img style="width:1439.2578125px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image.png"/></a></figure><div id="11a2c98a-30dc-80cb-b3f4-d27b15353e81" class="column-list"><div id="11a2c98a-30dc-8067-bd7f-da3ffc4cbeed" style="width:50%" class="column"><figure id="11a2c98a-30dc-807d-a06e-e230a8030f28" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%201.png"><img style="width:328.994140625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%201.png"/></a></figure></div><div id="11a2c98a-30dc-80a7-962f-e3b254a82f4f" style="width:50%" class="column"><figure id="11a2c98a-30dc-805b-81b6-cc9ac006b6ca" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%202.png"><img style="width:328.994140625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%202.png"/></a></figure></div></div><hr id="11a2c98a-30dc-80fc-bcce-edcd7c8a0aba"/><h2 id="11a2c98a-30dc-801f-a831-ca7c9c419041" class="">Part 2. Creating the Midway Face</h2><p id="11a2c98a-30dc-80c9-be28-dc14db544595" class="">In order to create a midway face of two images, in this case Obama and George Clooney, we must use the correspondences to create triangular meshes. Next, we compute the affine transformation for each image’s triangles into the mean points, which is the simple interpolation of the Delaunay coordinates, which are then </p><p id="11a2c98a-30dc-80d5-8b01-debd9d0f8ffb" class="">
+</p><p id="11a2c98a-30dc-80a8-97a8-f7e8a4f07ebe" class="">Behold, Georbama: (Two different sets of correspondences)</p><div id="11a2c98a-30dc-801a-be11-e463859cd8f1" class="column-list"><div id="11a2c98a-30dc-808c-affa-f45ecce742c1" style="width:33.333333333333336%" class="column"><figure id="11a2c98a-30dc-8049-b8ae-d3c4e070c3f9" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%203.png"><img style="width:328.994140625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%203.png"/></a></figure></div><div id="11a2c98a-30dc-80ec-842f-f42071e31d88" style="width:33.33333333333333%" class="column"><figure id="11a2c98a-30dc-80ae-9639-f061e03fe36f" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%204.png"><img style="width:328.994140625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%204.png"/></a></figure></div><div id="11a2c98a-30dc-80c0-952c-faff0bbaf1b0" style="width:33.333333333333336%" class="column"><figure id="11a2c98a-30dc-8089-89b8-eb5d8702e4c8" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%205.png"><img style="width:328.994140625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%205.png"/></a></figure></div></div><h2 id="11a2c98a-30dc-807d-8b21-fd3e87f21107" class="">Part 3. Creating the Morph Sequence</h2><p id="11b2c98a-30dc-8030-bf52-f0f97cd40a07" class="">By linearly changing the<strong> morph_frac</strong> and <strong>dissolve_frac </strong>of our morphed images, we can create a smooth transition accross both images. <strong>Morph_phrac</strong> controls how much to weight the average between the two sets of weights and <strong>disdolve_frac</strong> controls weighted average of the pixels from each morphed image. The result is a 3D tensor of frames which gives us a smooth gif!</p><p id="11a2c98a-30dc-80d6-81cc-f1a972532210" class="">
+</p><figure id="11a2c98a-30dc-8017-ba1a-d5e83510179f" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/george_to_obama_fast_idk.gif"><img style="width:576px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/george_to_obama_fast_idk.gif"/></a></figure><hr id="11b2c98a-30dc-809d-b545-e5707fc05888"/><h2 id="11b2c98a-30dc-80ab-9e31-e93e2c608e1d" class="">Boomerang GIF of Obama and George Cooleny</h2><figure id="11b2c98a-30dc-8017-b8d0-d232f9c507b5" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/george_to_obama_fast_boomerang.gif"><img style="width:576px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/george_to_obama_fast_boomerang.gif"/></a></figure><p id="11a2c98a-30dc-80a7-9231-cea8422ade85" class="">
+</p><h2 id="11a2c98a-30dc-8072-bda6-fb0483f9f984" class="">Part 4: The “Mean Face” of a Population ( + Bells and Whistles PCA Basis!)</h2><p id="11a2c98a-30dc-802f-9c0d-cdcba99c5d5a" class="">Next, we can cleverly find the “Mean” face of population by morphing samples to fit the mean shape of the Correspondences for each sample. In other words, we morph samples to fit the average “template” and then sum out and average over the morphed images. As a result, we get a better layout of information. However, we’re not done yet. Unfortunately, each image has noise which gives us a highly perturbed average! In order to fix this we extract the most information from each image by taking low-rank approximations, allowing us to control the amount of noise in each image. The resulting mean looks a lot like a real person instead of a blurry or highly perturbed image.</p><div id="11a2c98a-30dc-8069-995d-e30bc7e62a17" class="column-list"><div id="11a2c98a-30dc-80f5-9b06-fd91f6f3bf20" style="width:50%" class="column"><figure id="11a2c98a-30dc-80c6-b9e1-fbc9bca9938b" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%206.png"><img style="width:1199.248046875px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%206.png"/></a></figure></div><div id="11a2c98a-30dc-801e-bfc5-cec4c1f28025" style="width:50%" class="column"><figure id="11a2c98a-30dc-80fc-a8cf-f675721b75c9" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%207.png"><img style="width:551.982421875px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%207.png"/></a></figure><p id="11b2c98a-30dc-80ff-b8c6-e680755cbe6c" class="">
+</p></div></div><p id="11b2c98a-30dc-8097-83b4-ed10a11a4ec2" class="">
+</p><h3 id="11b2c98a-30dc-80f6-8199-e5ec4eec49b4" class="">PCA “Averages” which we use later for smoother morphing of “caricatures”</h3><div id="11a2c98a-30dc-803b-8a31-ce5a6b926afa" class="column-list"><div id="11a2c98a-30dc-8091-9118-f45dbde7223e" style="width:33.333333333333336%" class="column"><figure id="11a2c98a-30dc-8019-a996-e99f89195c14" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%208.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%208.png"/></a></figure><p id="11b2c98a-30dc-80ba-9d9c-e6f826f55e3d" class="">
+</p></div><div id="11a2c98a-30dc-80fd-bbad-cad2b89a0e5b" style="width:33.33333333333333%" class="column"><figure id="11a2c98a-30dc-808b-9e15-ff83789b7dc6" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%209.png"><img style="width:529.072265625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%209.png"/></a></figure><p id="11b2c98a-30dc-8015-81a6-cfd6a9667a25" class="">
+</p></div><div id="11a2c98a-30dc-8023-99bd-e4204babb15f" style="width:33.333333333333336%" class="column"><figure id="11a2c98a-30dc-8027-8f25-ddd0ae6a52d4" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2010.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2010.png"/></a></figure></div></div><div id="11a2c98a-30dc-80dd-831f-ecd4b5c26c90" class="column-list"><div id="11a2c98a-30dc-8073-8aff-ee7e3008c866" style="width:33.33333333333333%" class="column"><figure id="11a2c98a-30dc-80e0-ad50-f01b3d694a43" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2011.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2011.png"/></a></figure></div><div id="11a2c98a-30dc-80ad-bd42-d16ee0919b2d" style="width:33.33333333333333%" class="column"><figure id="11a2c98a-30dc-80a4-ad1c-f1da147e74bd" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2012.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2012.png"/></a></figure></div><div id="11a2c98a-30dc-8062-8fdf-c488830e600f" style="width:33.33333333333333%" class="column"><figure id="11a2c98a-30dc-801b-8b6b-e9df25545b4d" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2013.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2013.png"/></a></figure></div></div><h3 id="11a2c98a-30dc-80f4-83c2-ff002dfecb12" class="">Sample Images from morphs:</h3><div id="11a2c98a-30dc-803d-a116-c0bb7fda165a" class="column-list"><div id="11a2c98a-30dc-800b-b6e3-d8117b008b92" style="width:25%" class="column"><figure id="11a2c98a-30dc-8055-aec9-ef3ec06de63b" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2014.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2014.png"/></a></figure><figure id="11a2c98a-30dc-8017-ab21-e8d9a62100a8" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2015.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2015.png"/></a></figure></div><div id="11a2c98a-30dc-80ed-b1b0-fdafeac08c61" style="width:25%" class="column"><figure id="11a2c98a-30dc-80ec-a484-ffcb248b6cdf" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2016.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2016.png"/></a></figure><figure id="11a2c98a-30dc-8030-b887-da43e51aeca2" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2017.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2017.png"/></a></figure></div><div id="11a2c98a-30dc-80f5-83e7-d42f65339225" style="width:25%" class="column"><figure id="11a2c98a-30dc-80e8-83c8-c2ee350a2aa6" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2018.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2018.png"/></a></figure><figure id="11a2c98a-30dc-806a-8399-faab7b319645" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2019.png"><img style="width:529.072265625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2019.png"/></a></figure></div><div id="11a2c98a-30dc-8028-993f-d696f2364dc0" style="width:25%" class="column"><figure id="11a2c98a-30dc-80a7-9903-f3bc150b3ca8" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2020.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2020.png"/></a></figure><figure id="11a2c98a-30dc-80e7-a13f-e6466fdfeca8" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2021.png"><img style="width:385.3125px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2021.png"/></a></figure></div></div><p id="11a2c98a-30dc-80e0-84e4-efe818a44796" class="">
+</p><h2 id="11a2c98a-30dc-80bd-af39-edf08a873c11" class="">Part 5: Caricatures: Extrapolating from the Mean</h2><p id="11b2c98a-30dc-80d7-a3c1-e4c2746062ad" class="">Using the previous mean image, we can map a face (mine) to the shape of the mean face, while preserving the color and polygons of my face. To do this, we create <br/>First, we morph without dissolving, then we try finding a mean image by dissolving the mean pixels into my face pixels.<br/></p><h2 id="11b2c98a-30dc-8054-a80c-dc76024e17e3" class="">Warping to Mean with no Dissolve</h2><div id="11b2c98a-30dc-80b9-a09d-ddd5d331eead" class="column-list"><div id="11b2c98a-30dc-80a9-899a-efc559391ced" style="width:50.00000000000002%" class="column"><figure id="11b2c98a-30dc-80e7-a748-df8088862230" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2022.png"><img style="width:455px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2022.png"/></a></figure></div><div id="11b2c98a-30dc-80fc-97c3-ea76fb396bba" style="width:50.000000000000014%" class="column"><figure id="11b2c98a-30dc-8025-9e9b-fdb2f578de7c" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2023.png"><img style="width:455px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2023.png"/></a></figure></div></div><div id="11b2c98a-30dc-80bc-83b0-e0029b31f942" class="column-list"><div id="11b2c98a-30dc-80cc-8a91-cd26830ca20e" style="width:49.99999999999999%" class="column"><figure id="11b2c98a-30dc-80eb-bc6a-cfa863bf007c" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2024.png"><img style="width:549.00390625px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2024.png"/></a></figure><p id="11b2c98a-30dc-80fa-8ba1-f5269923dce5" class="">
+</p></div><div id="11b2c98a-30dc-809f-bde5-dd6a9518a4d4" style="width:50.000000000000014%" class="column"><figure id="11b2c98a-30dc-800e-9c5e-ddf6202dffc4" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2025.png"><img style="width:548.984375px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2025.png"/></a></figure></div></div><h2 id="11b2c98a-30dc-8065-b9ae-c461f2afa2b6" class="">Bells and Whistles: Morphing with a PCA image</h2><p id="11b2c98a-30dc-80e8-9abd-ead2b8e5eec5" class="">Using the PCA basis allows us to get rid of a lot of the outliers and unique features  which stray from the mean image. The result allows us to create beter looking morphs that blend a lot smoother.</p><div id="11b2c98a-30dc-809b-b4ae-ff7d5599ff62" class="column-list"><div id="11b2c98a-30dc-809d-b9ba-d441aee7d18b" style="width:33.333333333333336%" class="column"><figure id="11b2c98a-30dc-80c0-96ef-c3cbace739e1" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2026.png"><img style="width:455px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2026.png"/></a></figure></div><div id="11b2c98a-30dc-8087-9dc3-dcdd5e595e3e" style="width:33.33333333333333%" class="column"><figure id="11b2c98a-30dc-80e5-9ef6-d825ed2992aa" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2022.png"><img style="width:455px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2022.png"/></a></figure></div><div id="11b2c98a-30dc-80ea-b37c-f3fd5f14cd87" style="width:33.333333333333336%" class="column"><figure id="11b2c98a-30dc-80f3-83a7-d133f2198b9e" class="image"><a href="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2027.png"><img style="width:455px" src="Project%203%2011a2c98a30dc80ffbbb4dca0795dd18a/image%2027.png"/></a><figcaption>With Dissolve!</figcaption></figure></div></div><h2 id="11b2c98a-30dc-80d0-9b14-c406f42c1a55" class="">Bells and Whistles: Morph Classmates</h2><p id="11b2c98a-30dc-8078-a35e-da808cdb0ae9" class="">Video compiled by <strong>Camille Dang </strong>and <strong>Steven Luo</strong>.</p><p id="11b2c98a-30dc-808d-b45f-c2e2d49acc1b" class="">Order: <br/>David(Me) -&gt; steven -&gt; david -&gt; steven -&gt; clara -&gt; steven -&gt; clara -&gt; camille -&gt; clara -&gt; camille -&gt; clara -&gt; steven -&gt; clara -&gt; steven -&gt; david -&gt; steven -&gt; david<br/></p><p id="11b2c98a-30dc-802c-a1d3-f8c489926d7a" class=""><strong>URL: </strong><a href="https://youtu.be/OgBwQ1yH06E">https://youtu.be/OgBwQ1yH06E</a></p><figure id="11b2c98a-30dc-8033-bbad-e1cfd51bbd56"><div class="source"><a href="https://www.youtube.com/watch?v=OgBwQ1yH06E">https://www.youtube.com/watch?v=OgBwQ1yH06E</a></div></figure><p id="11b2c98a-30dc-8079-8454-fdb85fd51cbf" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
