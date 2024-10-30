@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Project 1:</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ecb76bbf-2d85-44ff-8fbd-ff96362d5367" class="page sans"><header><h1 class="page-title">Project 1:</h1><p class="page-description"></p></header><div class="page-body"><p id="fc811200-2783-4088-846c-d9413a58b359" class="">David Martinez - Fall 2024</p><p id="4a088a08-7646-4104-930c-7d1686d1ec33" class="">CS180 - Professor Efros</p><p id="f2727608-86e0-4ddc-8f91-5ffd583b8c02" class=""><strong>Images of the Russian Empire: Colorizing the Prokudin-Gorskii photo collection</strong></p><ol type="1" id="2f058648-2cb6-447f-b5d2-b7c30dd29a0d" class="numbered-list" start="1"><li>Preprocessing grayscale images with RGB color filters.</li></ol><ol type="1" id="bb383861-f20f-4900-a309-ec7c000619cf" class="numbered-list" start="2"><li>Apply linear grid search strategy for smaller images. (jpegs)</li></ol><ol type="1" id="80d99544-9241-4bc3-8b60-29e1a752257d" class="numbered-list" start="3"><li>Apply Gaussian Pyramid alignment using varying depths of recursion</li></ol><ol type="1" id="4584d880-b31e-4147-8f89-3714bd40e7d1" class="numbered-list" start="4"><li>Bell&#x27;s and whistles: FFT approach, white balancing, and filters/edge detection</li></ol><p id="1829ab44-ef33-4c18-be77-f93f303f530f" class="">
+</p><h1 id="052859b2-704a-4f2b-967d-c86a6bc62b05" class="">Simple Grid Search</h1><p id="78d3f800-c4bf-416e-8ff6-4f8c6cb5056d" class="">
+</p><div id="6673c1a1-3e72-429d-b5f0-9dc17729d4e3" class="column-list"><div id="5d7878b1-4d42-4a8f-9701-32cb6ebe0d71" style="width:33.33333333333333%" class="column"><figure id="5f88a2df-1ffe-48ff-a660-3886de0f7e27" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/cathedral_out.png"><img style="width:386.982421875px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/cathedral_out.png"/></a></figure><p id="459cfdaa-ce31-4ad2-b209-ad7d62bc0a1f" class="">green channel shift: (-5, -2)<br/>red channel shift: (-12, -3)<br/></p><p id="40d0bb34-35fe-41db-a12d-714132c4a9c7" class="">
+</p></div><div id="4b39b802-348e-4756-95ec-042dd059bf08" style="width:33.33333333333333%" class="column"><figure id="22506669-2472-45a2-a5d7-0ce9006131b6" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/monastery_out.png"><img style="width:388.994140625px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/monastery_out.png"/></a></figure><p id="f179b434-bc0d-4a87-8847-6fb1f01f749d" class="">green channel shift: (3, -2)<br/>red channel shift: (-3, -2)<br/></p></div><div id="38a3e5d9-3b1a-4d6b-8198-7caab8536d6c" style="width:33.33333333333334%" class="column"><figure id="2c526ea5-89f0-479e-8b1f-59f9d44ccd20" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/tobolsk_out.png"><img style="width:392.978515625px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/tobolsk_out.png"/></a></figure><p id="e453bbfc-7de0-4247-9cff-3d9e86a422c8" class="">green channel shift: (-3, -3)<br/>red channel shift: (-7, -3)<br/></p><p id="03121206-ee3c-40dc-858b-348daa7b1d1e" class="">
+</p></div></div><h1 id="1f2e987a-c2e4-4e06-83ae-d2265cbc42be" class="">Gaussian Pyramid Search Results</h1><div id="b3134f59-8617-4344-aaa9-e7ea826db4a9" class="column-list"><div id="ccfc6309-b704-4955-95f0-3517d00446e9" style="width:50%" class="column"><h2 id="4114ff00-b517-4a66-b80d-aff381ddf13f" class="">Emir</h2><p id="73ae82e5-1d39-469f-b89b-6a279259f78f" class="">green shift: (-48, -32), red shift(-99, -52)</p><figure id="caa811b1-150f-4967-a99f-341338a9f696" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/emir_final.jpg"><img style="width:912px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/emir_final.jpg"/></a></figure></div><div id="d61070d0-326e-40b9-bff8-d6a927bcd4d2" style="width:50%" class="column"><h2 id="c45b97de-c514-4f65-8087-eb64396c3972" class="">Church</h2><p id="ced5fdd9-20ee-4e80-9ad3-e4f8e13347a6" class="">green shift: (-28, -9), red shift: (-54, -3)</p><figure id="3b5b7ec5-256d-45c1-98f8-7ffa3c641772" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/church_final.jpg"><img style="width:912px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/church_final.jpg"/></a></figure></div></div><div id="f98a5014-8d4a-4d16-9522-0e3ec95cbfed" class="column-list"><div id="ec380584-9acc-4750-87d6-7c2c1a60afa7" style="width:50%" class="column"><h2 id="39d445a6-a6cb-499a-9dfc-da4dc91ae5d1" class="">Harvesters</h2><p id="d811500d-125c-4188-b7e8-4e864816267e" class="">green shift: (-46, -16), red shift(-102, -20)</p><figure id="8bc3c7b8-dab1-451e-be37-6f6ecb8d4aef" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/harvesters_final.jpg"><img style="width:1218.0078125px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/harvesters_final.jpg"/></a></figure></div><div id="aa9a08a3-6567-4d8b-ada0-f0a192512143" style="width:50%" class="column"><h2 id="2da575ab-3eba-4c2d-b6dd-64d85c426965" class="">Icon</h2><p id="5148d846-3f3b-42fd-b393-a4f90bb09cca" class="">green shift: (-41, -23), red shift(-83, -28)</p><figure id="df42b3d4-678f-40f4-b5c9-ef9d9169d86f" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/icon_final.jpg"><img style="width:3713px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/icon_final.jpg"/></a></figure></div></div><div id="2327def0-1bd8-47c5-94fb-da8451a60d00" class="column-list"><div id="26f6e530-a9dc-4cd8-815b-b548b98bd20f" style="width:100%" class="column"><h2 id="72d658dc-0810-4163-964c-d12a31ad0fe6" class="">Lady</h2><p id="c1655c86-47ea-4582-a7c6-a127a6b6ba0e" class="">green shift: (-39, -25), red shift: (-101, -26)</p><figure id="5e907a95-10ac-40ad-bc63-386d089ecd1e" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/lady_final.jpg"><img style="width:624px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/lady_final.jpg"/></a></figure><p id="7f64a8e2-db55-474f-a5df-907d0f2de36d" class="">
+</p></div><div id="d4814417-36a2-42b8-b8cb-33ad6d2b604f" style="width:100%" class="column"><h2 id="2ef9e0f5-27ea-4588-9496-8734de9c84b0" class="">Train</h2><p id="844f2cad-bb52-46bf-8235-c25971f6f5b7" class="">green shift: (-34, -13), red shift: (-64, -34)</p><figure id="b6beba0a-9918-4334-ba20-d9e6e6fdfc2a" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/train_final.jpg"><img style="width:624px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/train_final.jpg"/></a></figure></div></div><hr id="a2c23262-d005-41c0-8b37-623083c8c781"/><div id="3ded75b7-7c6d-4b25-b41a-b9a31411cb7d" class="column-list"><div id="f766a919-a5f8-49cd-849f-2d89166c6155" style="width:50%" class="column"><h2 id="bc514663-c0dc-4893-a2d5-3d0604fc21de" class="">Onion Church</h2><p id="2618a163-86a6-48e3-a0f3-1d6aa2e05d4d" class="">green shift: (-28, -40), red shift: (-97, -44)</p><figure id="ae80eaa8-902f-4ef7-843c-3931de3abde6" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/onion_church_final.jpg"><img style="width:3737px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/onion_church_final.jpg"/></a></figure><p id="2116e51b-0377-4b52-ab3b-d7b7a8453be5" class="">
+</p><h2 id="3eb7065f-cb95-415a-85f1-8b9532263c6a" class="">Self Portrait</h2><p id="d4966ac6-49a3-4716-8e1a-dca2529a5c44" class="">green shift: (-72, -41), red shift: (-175, -47)</p><figure id="3567715e-83a2-4f66-bc18-2a9ac6f2fb1f" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/self_portrait_final.jpg"><img style="width:3763px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/self_portrait_final.jpg"/></a></figure><h2 id="181cf8c0-5330-4afa-a7bc-d876ec5c2db8" class="">Melons</h2><p id="81588c7b-49ee-4d75-950a-040569fb5e5c" class="">green shift: (-72, 0), red shift: (-175, -4)</p></div><div id="f6b5977f-a95c-4ab6-a8c9-c5387d1251b8" style="width:50%" class="column"><h2 id="19678c05-399f-47fa-8969-df14951a893d" class="">Sculpture</h2><p id="be746ce7-8176-4300-b828-f71a5cd5404e" class="">green shift: (-52, 18), red shift: (-153, 43)</p><figure id="e7d92465-91f2-48e1-ba22-03ead9deafb6" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/sculpture_final.jpg"><img style="width:585.99609375px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/sculpture_final.jpg"/></a></figure><p id="0a654ee3-a9e7-4a5a-b0d5-61d759510624" class="">
+</p><h2 id="28fdc385-e28e-4149-8767-42b036dea266" class="">Three Generations</h2><p id="c5400b65-2583-4458-bf19-31221ea14072" class="">green shift: (-48, -28), red shift: (-115, -16)</p><figure id="1f013a8c-0231-42f5-88f2-588338a0d3a0" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/three_generations_final.jpg"><img style="width:3686px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/three_generations_final.jpg"/></a></figure><p id="a03a6170-11d1-449d-b5e7-48ec0ccf937a" class="">
+</p></div></div><figure id="2bfa12d1-9a6a-4d15-9df4-1e6b3b09eef6" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/melons_final.jpg"><img style="width:1104px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/melons_final.jpg"/></a></figure><p id="ee880ce9-e26e-4346-aaa3-221d0809caac" class="">
+</p><h1 id="5c36173f-ca06-479e-96e4-966720d736ee" class="">Bells and Whistles</h1><h2 id="0c81bd44-ac13-4db9-b7a2-d5dab8a6d5d8" class="">1. “Gray World” White Balancing</h2><p id="96e3f401-c2d1-4846-afb2-b983edc1e634" class="">A clever trick to balance the brightness and color channel imbalance in an image to use a strategy called white balancing. There are a few ways to implement this manually using a reference pixel for bright or dark areas, but a common technique is to assume that the world, as we perceive it, averages to grey. While this is true of the RGB color field, it isn’t the best representation of our perceived colors and the probability of encountering those colors. In my code, I implemented a version of white balancing which is slightly modified to fix the brightness issues perceived in these images, which had highly imbalanced color histograms.</p><h2 id="2d34ef1f-7c88-45df-ac8c-80574ecba8dc" class="">Example:</h2><div id="511218c9-0ec5-4957-8380-eed191717a3d" class="column-list"><div id="6270009b-4824-41d3-8e68-5a866a62efcb" style="width:50.000000000000014%" class="column"><h3 id="7a1d731e-2715-4331-bc45-557fb1c9be4a" class="">Ground Truth</h3><figure id="f637c01c-f6d2-4f86-961d-dfcfd49a6ff6" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/cathedral_out%201.png"><img style="width:528px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/cathedral_out%201.png"/></a><figcaption>This image appears to have a slight yellow hue with improper saturation</figcaption></figure><p id="14ef938a-67e6-40fe-9d22-4470773c13cc" class="">
+</p></div><div id="f9f0f06a-706e-4c4a-9b9c-b7a348bade85" style="width:50%" class="column"><h3 id="e506068f-ad74-46d4-a745-a5dd0ff6acb7" class="">White Balanced</h3><figure id="f1f51e0f-9616-4f99-ae7b-82f5435d27e4" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_cathedral_out.png"><img style="width:386.982421875px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_cathedral_out.png"/></a><figcaption>With white balancing, the sky looks more accurate and vibrant</figcaption></figure><p id="066991ff-4d20-4502-9c59-774626968572" class="">
+</p></div></div><div id="2a333051-130e-4d59-8167-a62cc76c7d04" class="column-list"><div id="0751d7c6-3064-49cb-9301-70bab0816250" style="width:50%" class="column"><figure id="0a44adc9-5e10-4939-818f-ab1e2b8d606e" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/tobolsk_out%201.png"><img style="width:392.978515625px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/tobolsk_out%201.png"/></a><figcaption>The original image has an unbalanced blue channel which overpowers the colors of the image</figcaption></figure><p id="88357437-501c-4ffe-8063-50cd5971de14" class="">
+</p></div><div id="e01d2c92-b59c-488e-860d-6c6f0ad2fbd5" style="width:50%" class="column"><figure id="d724f827-5ce1-4359-b1e4-474073e2325c" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_tobolsk_out.png"><img style="width:392.978515625px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_tobolsk_out.png"/></a><figcaption>With white balancing, the colors of the image are more accurate and less blue</figcaption></figure><p id="01d0caa9-a8ff-4d2e-bac4-22d4db61ba55" class="">
+</p></div></div><div id="8d158008-e55e-47f9-9004-2a9c2c29a670" class="column-list"><div id="025a4bf0-8c13-4d2b-9f4f-7a7d328bab30" style="width:50%" class="column"><h3 id="bccc81bf-1e31-4543-8ab3-8408dded2dbc" class="">Ground Truth</h3><figure id="e508a2c5-f103-45bc-a2ee-d49403354769" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/onion_church_test.jpg"><img style="width:3717px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/onion_church_test.jpg"/></a></figure></div><div id="edbe3655-599e-487c-9e11-217227325034" style="width:50%" class="column"><h3 id="37eac639-6564-42cd-a51b-e649176f10fa" class="">White Balanced</h3><figure id="7f6055ce-e719-44d6-b4c7-a0caccf01fc2" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_onion_church_final.jpg"><img style="width:624px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_onion_church_final.jpg"/></a></figure></div></div><p id="2281abce-732e-4b70-b620-31155caf6b5a" class="">
+</p><hr id="0dd8ec1c-06ad-438c-a257-1df9845ef3c5"/><h2 id="2fc184f1-e117-4ed0-9b14-3f26db1119cd" class="">FFT Based Approach</h2><p id="46444cb6-012a-4f94-9449-1f1432557085" class="">The FFT cross-correlation method aligns images by leveraging frequency domain operations, which handle alignment much more efficiently than a pixel-by-pixel search. Instead of checking each possible shift individually, which is slow and computationally expensive, the FFT approach quickly converts both images to the frequency domain, multiplies one by the complex conjugate of the other, and uses an inverse FFT to find the alignment shift in one step. This approach cuts down the runtime significantly—from a brute-force time complexity of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>m</mi><mo>×</mo><mi>n</mi><mo>×</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(m \times n \times N^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> to <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mi>log</mi><mo>⁡</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N^2 \log N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span>, making it much faster, especially for larger images such as those with the tif file format. In my implementation, this method greatly improved alignment speed and accuracy, bypassing the tedious process of testing every possible shift manually.</p><p id="fc229e48-6f1b-420d-a17d-d29ef04e99e4" class="">White alignment is working, I am still getting color correction implemented</p><p id="03e4f124-8d45-446a-8465-263a10f9a49e" class=""><strong>Note: These runtimes are on an M2 Mac Book Pro, so OS and hardware may affect results</strong></p><div id="66100371-bf05-4684-a2f4-cf332e784016" class="column-list"><div id="d63cf95d-afbc-4ed1-9360-8a131f3d93c8" style="width:50%" class="column"><h2 id="4a8384f3-7ba4-4828-988e-1420dea7b796" class="">Pyramid +  White Balanced:  <em>17.7 seconds</em></h2><figure id="c255a043-0b60-4d9c-9fbe-0731f8c3abf5" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_melons_final.jpg"><img style="width:3766px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/white_balanced_melons_final.jpg"/></a></figure></div><div id="08c8ac28-7a29-44c7-a862-41cb4e46fd64" style="width:50%" class="column"><h2 id="a5b3d9f6-3b14-4721-9e31-dd093d471ab8" class="">FFT +  White Balanced:  <em>5.7 seconds</em></h2><figure id="c49a36b3-8453-435d-90f6-7978584e92ee" class="image"><a href="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/fft_melons.jpg"><img style="width:585.99609375px" src="Project%201%20ecb76bbf2d8544ff8fbdff96362d5367/fft_melons.jpg"/></a></figure></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
