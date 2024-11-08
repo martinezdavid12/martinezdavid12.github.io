@@ -1,66 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David Martinez Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
 
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    <!-- External resources -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modernizr-2.6.2.min.js"></script>
 
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        a {
-            display: inline-block;
-            margin: 10px 20px;
-            padding: 12px 20px;
-            text-decoration: none;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        a:hover {
-            background-color: #2980b9;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
+    <!-- Additional scripts for older IE versions -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <h1>Welcome to My CS180-Fa24 Portfolio!</h1>
+<div id="colorlib-page">
+    <div class="container-wrap">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+            <div class="text-center">
+                <div class="author-img" style="background-image: url(images/about.png);"></div>
+                <h1 id="colorlib-logo"><a href="index.html">David Martinez</a></h1>
+                <span class="position"><a href="#">Software Engineer and Researcher</a></span>
+            </div>
+            <nav id="colorlib-main-menu" role="navigation" class="navbar">
+                <div id="navbar" class="collapse">
+                    <ul>
+                        <li class="active"><a href="#home" data-nav-section="home">Home</a></li>
+                        <li><a href="#about" data-nav-section="about">About</a></li>
+                        <li><a href="#education" data-nav-section="education">Education</a></li>
+                        <li><a href="#work-experience" data-nav-section="work-experience">Work Experience</a></li>
+                        <li><a href="#projects" data-nav-section="projects">Projects</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="colorlib-footer">
+                <ul>
+                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                </ul>
+            </div>
+        </aside>
 
-    <nav>
-        <a href="proj1.html">Project 1</a>
-        <a href="proj2.html">Project 2</a>
-        <a href="proj3.html">Project 3</a>
-        <a href="proj4.html">Project 4A</a>
-    </nav>
+        <div id="colorlib-main">
+            <!-- Home Section -->
+            <section id="home" data-section="home">
+                <!-- Content for home section here -->
+            </section>
 
-    <footer>
-        &copy; 2024 David Martinez - CS 180 Fall 2024
-    </footer>
+            <!-- About Section -->
+            <section id="about" class="colorlib-about" data-section="about">
+                <div class="colorlib-narrow-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-desc">
+                                <span class="heading-meta">About Me</span>
+                                <h2 class="colorlib-heading">Who Am I?</h2>
+                                <p><strong>Hi I'm David,</strong> I'm an undergrad at UC Berkeleysoftware engineer, researcher, and overall problem-solver who enjoys bridging cutting-edge research with real-world engineering problems. With a background in research and software engineering, I want to create innovative and scalable software that incorporates distributed computing and machine learning into the latest engineering challenges.</p>
+								<p>Seeking an internship where I can apply my industry and research experience to engineer modern solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+<section class="colorlib-education" data-section="education">
+    <div class="colorlib-narrow-content">
+        <div class="row">
+            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                <span class="heading-meta">Education</span>
+                <h2 class="colorlib-heading">Education</h2>
+                <div class="education-entry">
+                    <h3>University of California, Berkeley</h3>
+                    <p>BS in Electrical Engineering and Computer Science, Minor in Mathematics</p>
+                    <h4>Relevant Coursework:</h4>
+                    <ul>
+                        <li>CS 61A: Structure and Interpretation of Computer Programs</li>
+                        <li>CS 61B: Data Structures and Algorithms</li>
+                        <li>CS 61C: Machine Structures (Computer Architecture)</li>
+                        <li>CS 70: Discrete Mathematics and Probability Theory</li>
+                        <li>CS 162: Operating Systems and System Programming</li>
+                        <li>CS 170: Efficient Algorithms and Intractable Problems</li>
+                        <li>CS 180: Computer Vision</li>
+                        <li>CS 188: Artificial Intelligence</li>
+                        <li>CS 189: Machine Learning</li>
+						<li>CS 182: Deep Learning (Sp25 Projected)</li>
+                        <li>EECS 16A & 16B: Designing Information Devices and Systems I-II</li>
+						<li>EECS 126: Probability and Random Processes (Sp25 Projected)</li>
+                        <li>EECS 127: Optimization Models in Engineering</li>
+                        <li>MATH 53: Multivariable Calculus</li>
+                        <li>MATH 110: Upper Division Abstract Linear Algebra</li>
+                        <li>MATH 104: Real Analysis</li>
+						<li>MATH 185: Complex Analysis (Sp25 Projected)</li>
+                        <li>DATA 6: Introduction to Computational Thinking with Data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Work Experience Section -->
+            <section id="work-experience" class="colorlib-experience" data-section="work-experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Work Experience</span>
+							<h2 class="colorlib-heading">Work Experience</h2>
+							
+							<!-- Microsoft Internship Entry -->
+							<div class="experience-entry">
+								<h3>Microsoft</h3>
+								<p><strong>Software Engineer Intern</strong></p>
+								<p>Focused on Data Engineering and Large Language Models (LLMs) resource optimization. Enhanced resource utilization and runtime efficiency of large language models and distributed computing systems by 31% and up to 72% in specific cases through targeted algorithm optimization research</p>
+
+							</div>
+			
+							<!-- BAIR - Waller Lab Entry -->
+							<div class="experience-entry">
+								<h3>Berkeley Artificial Intelligence Research (BAIR) - Waller Lab</h3>
+								<p><strong>Undergraduate Researcher</strong></p>
+								<p>Improving the scalability of Gaussian Splatting technology for NeRF research, resulting in significant performance enhancements and the development of a novel class-agnostic algorithm</p>
+							</div>
+							<!-- BNC -->
+							<div class="experience-entry">
+								<h3>UC Berkeley Basic Needs Center</h3>
+								<p><strong>Software Engineer Intern</strong></p>
+								<p>Engineered a responsive and scalable web application with Firebase, Tailwind, and React that streamlined inventory and transactions for the UC Berkeley community of 40,000+</p>
+							</div>
+                            <!-- Alan AI-->
+							<div class="experience-entry">
+								<h3>Alan AI</h3>
+								<p><strong>Software Engineer Intern</strong></p>
+								<p>Integrated conversational AI voice assistant technology for diverse clientele applications, orchestrating the development of scalable, secure systems utilizing JavaScript, React, and Flutter frameworks</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+            </section>
+			<!-- Class Projects Section-->
+			<section id="cs180" class="colorlib-projects" data-section="cs180">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">CS180 Class Projects</span>
+							<h2 class="colorlib-heading">CS180 - Fall 2024</h2>
+							<div class="project-links">
+								<ul>
+									<li><a href="proj1.html">Project 1</a></li>
+									<li><a href="proj2.html">Project 2</a></li>
+									<li><a href="proj3.html">Project 3</a></li>
+									<li><a href="proj4.html">Project 4A</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+            <!-- Projects Section -->
+            <section id="projects" class="colorlib-projects" data-section="projects">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Projects</span>
+							<h2 class="colorlib-heading">Projects</h2>
+			
+							<!-- Mindscape Project -->
+							<div class="project-entry">
+								<h4><a href="https://ballot.hackmit.org/project/mmnum-zajod-mfhgr-bcnyu"><strong>Mindscape</strong></a> | <em>PyTorch, Three.js</em> <span class="project-date">September 2024</span></h4>
+								<p>Developed a HackMIT-winning project that visualizes cancer progression in MRI scans by parsing 2D slices into a custom NeRF model, segmenting tumors with SAM, and generating 3D meshed visualizations for real-time analysis on a React-based web platform.</p>
+							</div>
+			
+							<!-- Black-Box Adversarial Attacks Project -->
+							<div class="project-entry">
+								<h4><strong>Black-Box Adversarial Attacks: Efficacy, Complexity, Improvements</strong> <a href="https://drive.google.com/file/d/18T3vBePflgTwkcm4vQcLlLC2eUqD65yQ/view?usp=sharing"><small>(Report PDF)</small></a> <span class="project-date">February 2024</span></h4>
+								<p>Evaluated current adversarial ML techniques for images to determine features and architectural choices that make networks susceptible. Used findings to develop an improved adversarial algorithm with less perceivable noise.</p>
+							</div>
+			
+							<!-- IM2SPAIN Project -->
+							<div class="project-entry">
+								<h4><strong>IM2SPAIN: Nearest Neighbors for Geo-location</strong> | <em>Machine Learning, Applied Mathematics</em> <span class="project-date">May 2024</span></h4>
+								<p>Implemented a k-Nearest Neighbors (k-NN) algorithm to predict geographic coordinates from image embeddings encoded using OpenAI’s CLIP model, achieving a 93% accuracy rate by using mean displacement error (MDE) for evaluation.</p>
+							</div>
+			
+							<!-- Language Identification Model Project -->
+							<div class="project-entry">
+								<h4><strong>Language Identification Model</strong> | <em>Natural Language Processing, RNNs, NumPy</em> <span class="project-date">July 2023 - August 2023</span></h4>
+								<p>Designed and implemented an RNN-based model in Python (NumPy) for language identification of variable-length strings. Implemented parallelized activation layers, linear modules, and backpropagation algorithms.</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+        </div><!-- end:colorlib-main -->
+    </div><!-- end:container-wrap -->
+</div><!-- end:colorlib-page -->
+
+<!-- Footer with citation -->
+<div class="colorlib-footer">
+    <p><small>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small></p>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
+
