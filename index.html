@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css"> <li><a href="#work-experience" data-nav-section="work-experience">Work Experience</a></li>
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -45,6 +45,7 @@
                         <li><a href="#about" data-nav-section="about">About</a></li>
                         <li><a href="#education" data-nav-section="education">Education</a></li>
                         <li><a href="#work-experience" data-nav-section="work-experience">Work Experience</a></li>
+                        <li><a href="#class-projects" data-nav-section="class-projects">CS 180 Projects</a></li>
                         <li><a href="#projects" data-nav-section="projects">Projects</a></li>
                     </ul>
                 </div>
@@ -160,12 +161,14 @@
 			
             </section>
 			<!-- Class Projects Section-->
-			<section id="cs180" class="colorlib-projects" data-section="cs180">
+			<section id="cs180" class="colorlib-projects" data-section="class-projects">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">CS180 Class Projects</span>
+							<span class="heading-meta">Class Projects</span>
 							<h2 class="colorlib-heading">CS180 - Fall 2024</h2>
+                            <p>CS 180 is an undergraduate computational photography and computer vision class at UC Berkeley. I implemented fundamental image processing algorithms entirely from scratch in Python, beginning with basic physics and optics principles of image formation and advancing to modern deep learning architectures for visual understanding. Through intensive programming projects, I built a comprehensive toolkit spanning classical techniques like image warping and stereo vision to cutting-edge applications in neural networks and Diffusion models, with each component crafted from first principles rather than relying on existing libraries. The hands-on curriculum bridged the theoretical foundations of computational photography with contemporary machine learning approaches, challenging me to develop sophisticated computer vision systems that demonstrate mastery of both the underlying mathematical concepts and their practical implementation.</p>
+                            <h4>Check out my projects in CS 180:</h4>
                             <!-- 1 Project -->
 							<div class="project-entry">
 								<h4><a href="proj1.html">Project 1 (Click to learn more!)</a></h4>
@@ -199,40 +202,67 @@
 
             <!-- Projects Section -->
             <section id="projects" class="colorlib-projects" data-section="projects">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Projects</span>
-							<h2 class="colorlib-heading">Projects</h2>
-			
-							<!-- Mindscape Project -->
-							<div class="project-entry">
-								<h4><a href="https://ballot.hackmit.org/project/mmnum-zajod-mfhgr-bcnyu"><strong>Mindscape</strong></a> | <em>PyTorch, Three.js</em> <span class="project-date">September 2024</span></h4>
-								<p>Developed a HackMIT-winning project that visualizes cancer progression in MRI scans by parsing 2D slices into a custom NeRF model, segmenting tumors with SAM, and generating 3D meshed visualizations for real-time analysis on a React-based web platform.</p>
-							</div>
-			
-							<!-- Black-Box Adversarial Attacks Project -->
-							<div class="project-entry">
-								<h4><strong>Black-Box Adversarial Attacks: Efficacy, Complexity, Improvements</strong> <a href="https://drive.google.com/file/d/18T3vBePflgTwkcm4vQcLlLC2eUqD65yQ/view?usp=sharing"><small>(Report PDF)</small></a> <span class="project-date">February 2024</span></h4>
-								<p>Evaluated current adversarial ML techniques for images to determine features and architectural choices that make networks susceptible. Used findings to develop an improved adversarial algorithm with less perceivable noise.</p>
-							</div>
-			
-							<!-- IM2SPAIN Project -->
-							<div class="project-entry">
-								<h4><strong>IM2SPAIN: Nearest Neighbors for Geo-location</strong> | <em>Machine Learning, Applied Mathematics</em> <span class="project-date">May 2024</span></h4>
-								<p>Implemented a k-Nearest Neighbors (k-NN) algorithm to predict geographic coordinates from image embeddings encoded using OpenAI’s CLIP model, achieving a 93% accuracy rate by using mean displacement error (MDE) for evaluation.</p>
-							</div>
-			
-							<!-- Language Identification Model Project -->
-							<div class="project-entry">
-								<h4><strong>Language Identification Model</strong> | <em>Natural Language Processing, RNNs, NumPy</em> <span class="project-date">July 2023 - August 2023</span></h4>
-								<p>Designed and implemented an RNN-based model in Python (NumPy) for language identification of variable-length strings. Implemented parallelized activation layers, linear modules, and backpropagation algorithms.</p>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</section>
+                <div class="colorlib-narrow-content">
+                    <div class="row">
+                        <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                            <span class="heading-meta">Projects</span>
+                            <h2 class="colorlib-heading">Projects</h2>
+
+                            <!-- Mindscape Project -->
+                            <div class="project-entry">
+                                <h4>
+                                    <a href="https://ballot.hackmit.org/project/mmnum-zajod-mfhgr-bcnyu"><strong>Mindscape</strong></a>
+                                    | <em>PyTorch, Three.js</em>
+
+                                </h4>
+                                <p>Developed a HackMIT-winning project that visualizes cancer progression in MRI scans by parsing 2D slices into a custom NeRF model, segmenting tumors with SAM, and generating 3D meshed visualizations for real-time analysis on a React-based web platform.</p>
+                            </div>
+
+                            <!-- Black-Box Adversarial Attacks Project -->
+                            <div class="project-entry">
+                                <h4>
+                                    <strong>Black-Box Adversarial Attacks: Efficacy, Complexity, Improvements</strong>
+                                    <a href="https://drive.google.com/file/d/18T3vBePflgTwkcm4vQcLlLC2eUqD65yQ/view?usp=sharing"><small>(Report PDF)</small></a>
+                                    
+                                </h4>
+                                <p>Evaluated current adversarial ML techniques for images to determine features and architectural choices that make networks susceptible. Used findings to develop an improved adversarial algorithm with less perceivable noise.</p>
+                            </div>
+
+                            <!-- IM2SPAIN Project -->
+                            <div class="project-entry">
+                                <h4>
+                                    <strong>IM2SPAIN: Nearest Neighbors for Geo-location</strong>
+                                    | <em>Machine Learning, Applied Mathematics</em>
+                                
+                                </h4>
+                                <p>Implemented a k-Nearest Neighbors (k-NN) algorithm to predict geographic coordinates from image embeddings encoded using OpenAI’s CLIP model, achieving a 93% accuracy rate by using mean displacement error (MDE) for evaluation.</p>
+                            </div>
+
+                            <!-- Language Identification Model Project -->
+                            <div class="project-entry">
+                                <h4>
+                                    <strong>Language Identification Model</strong>
+                                    | <em>Natural Language Processing, RNNs, NumPy</em>
+                               
+                                </h4>
+                                <p>Designed and implemented an RNN-based model in Python (NumPy) for language identification of variable-length strings. Implemented parallelized activation layers, linear modules, and backpropagation algorithms.</p>
+                            </div>
+
+                            <!-- Voice Controlled Car -->
+                            <div class="project-entry">
+                                <h4>
+                                    <strong>Voice Controlled Car</strong>
+                                    | <em>Electrical Engineering, Machine Learning</em>
+                                   
+                                </h4>
+                                <p>Engineered an offline voice-control system through signal processing, PCA, and machine learning models. Optimized a closed-loop feedback power system for steady vehicle control.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 			
 
         </div><!-- end:colorlib-main -->
