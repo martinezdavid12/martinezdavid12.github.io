@@ -1,200 +1,345 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "David Martinez",
+    "label": "Machine Learning Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "martinezdavid@berkeley.edu",
+    "phone": "510-962-2005",
+    "url": "https://www.linkedin.com/in/dmartinez212",
+    "summary": "Undergraduate machine learning researcher specializing in computational imaging, multimodal biological foundation models, and large-scale systems for training and inference.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "",
+      "postalCode": "",
+      "city": "Berkeley",
       "countryCode": "US",
       "region": "California"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "dmartinez212",
+        "url": "https://www.linkedin.com/in/dmartinez212"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "NVIDIA",
+      "position": "GPU System Performance Data Scientist Intern",
+      "url": "",
+      "startDate": "2025-08-01",
+      "endDate": "2025-12-01",
+      "summary": "Modeled GPU cluster behavior and developed tools to study performance bottlenecks in distributed ML workloads.",
+      "highlights": [
+        "Architected hardware modeling tools to identify performance bottlenecks in GPU clusters.",
+        "Optimized distributed training and inference pipelines for large-scale machine learning workloads."
+      ]
+    },
+    {
+      "name": "Apple Inc.",
+      "position": "Machine Learning Engineer Intern",
+      "url": "",
+      "startDate": "2025-05-01",
+      "endDate": "2025-08-01",
+      "summary": "Built scalable ML models and data pipelines to support experimentation and decision-making for production systems.",
+      "highlights": [
+        "Designed scalable ML models and SQL pipelines unifying heterogeneous datasets for robust A/B and causal analysis.",
+        "Supported production decision-making and recommendation systems through end-to-end experimentation workflows."
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "position": "Software Engineer Intern",
+      "url": "",
+      "startDate": "2024-05-01",
+      "endDate": "2024-08-01",
+      "summary": "Worked on distributed systems and applied ML research to improve LLM inference efficiency.",
+      "highlights": [
+        "Conducted applied research on optimizing LLM inference and distributed systems, achieving measurable improvements in runtime efficiency and resource utilization.",
+        "Implemented parallel Scala/Python data-processing pipelines with Spark on heterogeneous GPU/CPU clusters.",
+        "Developed token-compression architectures for long-context inference under fixed compute budgets."
+      ]
+    },
+    {
+      "name": "UC Berkeley Department of Electrical Engineering & Computer Sciences",
+      "position": "Course Staff - Reader (Machine Learning)",
+      "url": "https://eecs.berkeley.edu/",
+      "startDate": "2025-01-01",
+      "endDate": "2025-05-01",
+      "summary": "Course staff for the core undergraduate machine learning course at UC Berkeley.",
+      "highlights": [
+        "Graded assignments and projects for a large-enrollment machine learning course.",
+        "Answered student questions and supported course logistics."
+      ]
+    },
+    {
+      "name": "Berkeley Computational Imaging Lab",
+      "position": "Undergraduate Researcher",
+      "url": "https://waller-lab.github.io/",
+      "startDate": "2023-02-01",
+      "endDate": "",
+      "summary": "Researching mixed-domain deep learning methods for inverse problems in MRI, optics, and computational imaging under Prof. Laura Waller.",
+      "highlights": [
+        "Developed mixed-domain deep learning methods for inverse problems in MRI, optics, and computational imaging, leveraging mathematical priors and signal constraints for reconstruction from undersampled measurements.",
+        "Explored improvements to implicit neural rendering techniques via Gaussian Splatting and NeRF frameworks, using refined initializations and custom camera models to support large-scale biological and microscopy datasets."
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "ColorStack at Berkeley",
+      "location": "Berkeley, CA",
+      "position": "President and Cofounder",
+      "url": "https://colorstack.org/",
+      "startDate": "2024-01-01",
+      "endDate": "2025-05-01",
+      "summary": "Founded and led Berkeley’s ColorStack chapter to support underrepresented CS students.",
+      "highlights": [
+        "Built a community supporting 100+ underrepresented CS students through mentorship, technical workshops, and career events.",
+        "Organized events that helped members secure internship roles across industry and research."
+      ]
+    },
+    {
+      "organization": "Algoverse AI Research",
+      "location": "Berkeley, CA",
+      "position": "Research Mentor",
+      "url": "",
+      "startDate": "2025-06-01",
+      "endDate": "",
+      "summary": "Mentored students on applied AI research projects in collaboration with academic PIs.",
+      "highlights": [
+        "Mentored undergraduate and high school students in collaboration with PIs from Meta FAIR and UC San Diego.",
+        "Guided students through project scoping, experimental design, implementation, and technical writing."
+      ]
+    },
+    {
+      "organization": "SEED Scholars Program, UC Berkeley",
+      "location": "Berkeley, CA",
+      "position": "Peer Tutor",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "2025-05-01",
+      "summary": "Tutored SEED Scholars in technical coursework.",
+      "highlights": [
+        "Provided one-on-one support in machine learning and convex optimization to undergraduate students.",
+        "Helped students develop stronger mathematical foundations for advanced coursework."
+      ]
+    },
+    {
+      "organization": "SEED Scholars Program, UC Berkeley",
+      "location": "Berkeley, CA",
+      "position": "Undergraduate Mentor",
+      "url": "",
+      "startDate": "2024-08-01",
+      "endDate": "",
+      "summary": "Mentored underrepresented STEM students on academics, research, and careers.",
+      "highlights": [
+        "Advised scholars on coursework planning, research pathways, and career preparation.",
+        "Supported mentees in navigating research opportunities and internships."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "url": "https://www.berkeley.edu/",
+      "area": "Electrical Engineering and Computer Sciences, Minor in Mathematics",
+      "studyType": "B.S.",
+      "startDate": "2022-08-01",
+      "endDate": "2026-05-01",
+      "score": "3.42",
+      "courses": [
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
+        "Computational Photography",
+        "Convex Optimization",
+        "Operating Systems",
+        "Probability Theory",
+        "Computational Biology",
+        "Data Science"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "SEED Honors Scholar",
+      "date": "2022-08-01",
+      "awarder": "UC Berkeley SEED Scholars Program",
+      "url": "",
+      "summary": "Selected as a SEED Honors Scholar, a program supporting underrepresented students in STEM through mentorship, community, and research opportunities."
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models",
+      "publisher": "ICML GenBio 2025 (Spotlight)",
+      "releaseDate": "2025-07-01",
+      "url": "",
+      "summary": "Introduces automated neuron labeling methods to steer and interpret protein language models, enabling more controllable sequence generation and mechanistic insights."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "SafeGenie: Erasing Dangerous Concepts from Biological Diffusion Models",
+      "publisher": "NeurIPS BioSafe GenAI 2025 (Oral)",
+      "releaseDate": "2025-12-01",
+      "url": "",
+      "summary": "Proposes a method for removing toxic protein-generation capabilities from biological diffusion models while preserving benign behavior."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Mitigating Forgetting in Continual Learning with Selective Gradient Projection",
+      "publisher": "IJCNLP-AACL SRW 2025",
+      "releaseDate": "2025-01-01",
+      "url": "",
+      "summary": "Introduces a selective gradient projection approach to reduce catastrophic forgetting in continual learning settings."
+    },
+    {
+      "name": "HierACT: Hierarchical Circuit Discovery for Interpretable Alzheimer’s Classification with Geometry-Aware Vision Transformers",
+      "publisher": "Preprint (In Preparation)",
+      "releaseDate": "",
+      "url": "",
+      "summary": "Develops a geometry-aware vision transformer framework with hierarchical circuit discovery for interpretable Alzheimer’s disease classification from neuroimaging data."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Machine Learning & AI",
+      "level": "Advanced",
+      "icon": "fa-solid fa-brain",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Deep Learning",
+        "Computer Vision",
+        "Neural Rendering",
+        "Inverse Problems",
+        "Computational Imaging",
+        "Multimodal Foundation Models",
+        "Mechanistic Interpretability",
+        "NLP"
+      ]
+    },
+    {
+      "name": "Systems & Data",
+      "level": "Advanced",
+      "icon": "fa-solid fa-server",
+      "keywords": [
+        "Parallel and Distributed Computing",
+        "GPU Systems",
+        "Spark",
+        "Hadoop",
+        "Data Engineering",
+        "Cloud (AWS, Azure, GCP)",
+        "Docker",
+        "CI/CD",
+        "Linux"
+      ]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
+      "keywords": [
+        "Python",
+        "Java",
+        "C/C++",
+        "Scala",
+        "SQL",
+        "x86",
+        "Matlab",
+        "LaTeX",
+        "HTML/CSS",
+        "PyTorch",
+        "TensorFlow",
+        "JAX",
+        "CUDA",
+        "NumPy",
+        "pandas",
+        "OpenMP",
+        "Git"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "English",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
+      "language": "Spanish",
+      "fluency": "Native speaker",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
+      "name": "Research Interests",
+      "icon": "fa-solid fa-microscope",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Computational Imaging",
+        "Multimodal Biological Foundation Models",
+        "Computational Biology",
+        "Mechanistic Interpretability",
+        "Imaging–Genomics Integration"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
+  "references": [],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "SafeGenie: Removing Toxic Protein-Generation Capabilities from Protein Diffusion Models",
+      "summary": "Developed methods to erase dangerous concepts from protein diffusion models while preserving useful generative behavior; presented as an oral at the NeurIPS BioSafe GenAI Workshop.",
+      "highlights": [
+        "Designed interventions to suppress toxic sequence generation in biological diffusion models.",
+        "Evaluated safety-performance trade-offs under realistic biological constraints."
+      ],
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-01",
+      "url": ""
+    },
+    {
+      "name": "Automated Neuron Labeling for Steering and Interpretability in Protein Language Models",
+      "summary": "Built tools for neuron-level analysis and steering of compact protein language models; accepted as a Spotlight at ICML GenBio 2025.",
+      "highlights": [
+        "Implemented neuron-labeling pipelines to associate internal units with human-interpretable biochemical concepts.",
+        "Demonstrated generative steering of protein sequences using labeled neurons."
+      ],
+      "startDate": "2024-10-01",
+      "endDate": "2025-07-01",
+      "url": ""
+    },
+    {
+      "name": "Torch Interlacer",
+      "summary": "Open-source implementation of mixed-domain neural networks for phase retrieval and computational imaging.",
+      "highlights": [
+        "Contributed to a PyTorch library for mixed-domain deep learning in imaging inverse problems.",
+        "Supported experiments on phase retrieval and MRI reconstruction with physics-informed architectures."
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "url": "https://github.com/nalinimsingh/interlacer"
+    },
+    {
+      "name": "DeltaCAT",
+      "summary": "Open-source toolkit for scalable data versioning and transformation in the Ray ecosystem.",
+      "highlights": [
+        "Contributed to distributed data-processing utilities within the DeltaCAT project.",
+        "Improved support for large-scale dataset handling in ML and analytics workflows."
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "",
+      "url": "https://github.com/ray-project/deltacat"
+    },
+    {
+      "name": "ESM Neuron Explanations Dataset",
+      "summary": "Maintainer of a Hugging Face dataset hosting neuron-level explanations for compact protein language models.",
+      "highlights": [
+        "Curated and maintained a dataset of neuron explanations to enable downstream mechanistic interpretability research.",
+        "Integrated dataset with public protein language model tooling for community use."
+      ],
+      "startDate": "2024-09-01",
+      "endDate": "",
+      "url": "https://huggingface.co/datasets/protolyze"
     }
   ]
 }
